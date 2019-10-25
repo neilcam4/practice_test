@@ -46,4 +46,9 @@ describe('sums spec', function(){
         let result = sumsCalc(string)
         expect(result).toEqual( [ '1 + 2 = 3', '3 + 4 = 7' ] )
     })
+    it('if string is 11 + 22, 33 + 44 should return 11 + 22 = 33, 33 + 44 = 77', function(){
+        let string = '11 + 22,33 + 44';
+        let result = sumsCalc(string)
+        expect(result).toEqual( [ '11 + 22 = 33', '33 + 44 = 77' ] )
+    })
 })
