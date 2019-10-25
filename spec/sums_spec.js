@@ -41,4 +41,9 @@ describe('sums spec', function(){
         let result = sumsCalc(string)
         expect(result).toEqual('6 / 2 = 3')
     })
+    it('if string is 1 + 2, 3 + 4 should return 1 + 2 = 3, 3 + 4 = 7', function(){
+        let string = '1 + 2,3 + 4';
+        let result = sumsCalc(string)
+        expect(result).toEqual( [ '1 + 2 = 3', '3 + 4 = 7' ] )
+    })
 })
